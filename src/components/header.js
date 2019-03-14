@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const ListLink = props =>(
-  <li style={{ marginRight: 20 }}>
+  <li style={{ marginRight: 20, marginBottomL: 0 }}>
     <Link to={props.to} style={{ textDecoration: `none`, color: `#fff` }}>{props.children}</Link>
   </li>
 )
@@ -17,20 +17,23 @@ const Header = ({ siteTitle }) => (
   >
     <header
       style={{
-        maxWidth: 960,
+        display: `flex`,
+        maxWidth: 1020,
         margin: `0 auto`,
         padding: `0 1.0875rem`
       }}
     >
-      <Link to="/" style={{ color: `white`, textDecoration: `none`, }} >
-        <h3>{siteTitle}</h3>
-      </Link>
+      <h3 style={{ marginRight: 20 }}>
+        <Link to="/" style={{ color: `white`, textDecoration: `none`, }} >
+          {siteTitle}
+        </Link>
+      </h3>
       <ul 
         style={{ 
           listStyle: `none`, 
           display: `flex`, 
           flexDirection: `row`, 
-          justifyContent: `spaceBetween`, 
+          justifyContent: `end`, 
           margin: 0 
         }}
       >
