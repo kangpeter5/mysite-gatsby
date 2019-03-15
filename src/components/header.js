@@ -18,9 +18,8 @@ const Header = ({ siteTitle }) => (
     <header
       style={{
         display: `flex`,
-        maxWidth: 1020,
-        margin: `0 auto`,
-        padding: `0 1.0875rem`
+        maxWidth: 980,
+        margin: `0 auto`
       }}
     >
       <h3 style={{ marginRight: 20 }}>
