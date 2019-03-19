@@ -1,30 +1,30 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React , { useState, useEffect } from "react"
+import React from "react"
 import "./header.css"
 
-/*function ListLinks({ to, children }) {
-  const [isActive, setIsActive] = useState(false)
-  let urlPath = window.location.pathname
+const isActive = ({ location, href }) => {
+  if(location.pathname === '/' && href === '/'){
+    return { className: 'active' }
+  } else if ( href !== '/'){
+    return { className: 'active' }
+  }
 
-  return (
-    <>
-    {active === true ? (
-      <li className="active">
-        <Link>
-          {children}
-        </Link>
-      </li>
-    ) : (
-      <li>
-        <Link to={to} onClick={() => setIsActive(true)}>
-          {children}
-        </Link>
-      </li>
-    )}
-    </>
-  )
-}*/
+  return null
+}
+
+const ListLinks = ({ children, to }) =>(
+  <li getProps={isActive}>
+    <Link to={to}>
+      {children}
+    </Link>
+  </li>
+)
+
+ListLinks.propTypes = {
+  children: PropTypes.string,
+  to: PropTypes.string,
+}
 
 const ListLink = props =>(
   <li>
@@ -61,8 +61,8 @@ const Header = ({ siteTitle }) => (
           margin: 0
         }}
       >
-        <ListLink to="/about/">About</ListLink>
-        <ListLink to="/contact/">Contact</ListLink>
+        <ListLinks to="/about/">About</ListLinks>
+        <ListLinks to="/contact/">Contact</ListLinks>
       </ul>
     </header>
   </div>
@@ -70,6 +70,7 @@ const Header = ({ siteTitle }) => (
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  location: PropTypes.object.isRequired,
 }
 
 Header.defaultProps = {

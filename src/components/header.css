@@ -1,4 +1,4 @@
-header li.active{
+header .active{
     border-bottom: 2px solid #fff;
 }
 header li{
