@@ -3,38 +3,32 @@ import PropTypes from "prop-types"
 import React from "react"
 import "./header.css"
 
-const isActive = ({ location, href }) => {
-  if(location.pathname === '/' && href === '/'){
-    return { className: 'active' }
-  } else if ( href !== '/'){
+/* using this git
+https://github.com/lowmess/lowmess/blob/master/src/components/Navigation/Navigation.js
+*/
+
+const isActive = ({ location, href }) => {  
+  if(location.pathname !== '/' && location.pathname === href){
     return { className: 'active' }
   }
 
   return null
 }
 
-const ListLinks = ({ children, to }) =>(
-  <li getProps={isActive}>
-    <Link to={to}>
+const ListLink = ({ children, to }) =>(
+  <li>
+    <Link to={to} getProps={isActive}>
       {children}
     </Link>
   </li>
 )
 
-ListLinks.propTypes = {
+ListLink.propTypes = {
   children: PropTypes.string,
   to: PropTypes.string,
 }
 
-const ListLink = props =>(
-  <li>
-    <Link to={props.to}>
-      {props.children}
-    </Link>
-  </li>
-)
-
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, location }) => (
   <div
     style={{
       background: `rebeccapurple`,
@@ -61,8 +55,8 @@ const Header = ({ siteTitle }) => (
           margin: 0
         }}
       >
-        <ListLinks to="/about/">About</ListLinks>
-        <ListLinks to="/contact/">Contact</ListLinks>
+        <ListLink to="/about/">About</ListLink>
+        <ListLink to="/contact/">Contact</ListLink>
       </ul>
     </header>
   </div>
@@ -70,11 +64,12 @@ const Header = ({ siteTitle }) => (
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-  location: PropTypes.object.isRequired,
+  location: PropTypes.object,
 }
 
 Header.defaultProps = {
   siteTitle: ``,
+  location: window.location,
 }
 
 export default Header
