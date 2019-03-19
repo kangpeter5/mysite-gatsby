@@ -1,10 +1,36 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React , { useState, useEffect } from "react"
+import "./header.css"
+
+/*function ListLinks({ to, children }) {
+  const [isActive, setIsActive] = useState(false)
+  let urlPath = window.location.pathname
+
+  return (
+    <>
+    {active === true ? (
+      <li className="active">
+        <Link>
+          {children}
+        </Link>
+      </li>
+    ) : (
+      <li>
+        <Link to={to} onClick={() => setIsActive(true)}>
+          {children}
+        </Link>
+      </li>
+    )}
+    </>
+  )
+}*/
 
 const ListLink = props =>(
-  <li style={{ marginRight: 20, marginBottomL: 0 }}>
-    <Link to={props.to} style={{ textDecoration: `none`, color: `#fff` }}>{props.children}</Link>
+  <li>
+    <Link to={props.to}>
+      {props.children}
+    </Link>
   </li>
 )
 
@@ -18,7 +44,6 @@ const Header = ({ siteTitle }) => (
     <header
       style={{
         display: `flex`,
-        maxWidth: 980,
         margin: `0 auto`
       }}
     >
@@ -32,8 +57,8 @@ const Header = ({ siteTitle }) => (
           listStyle: `none`, 
           display: `flex`, 
           flexDirection: `row`, 
-          justifyContent: `end`, 
-          margin: 0 
+          justifyContent: `end`,
+          margin: 0
         }}
       >
         <ListLink to="/about/">About</ListLink>

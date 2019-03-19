@@ -28,19 +28,22 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
-            margin: `0 auto`,
-            maxWidth: 1020,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
+            margin: `20px auto`,
+            padding: `0px 1.0875rem 1.45rem`
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a> and <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a>
-          </footer>
         </div>
+        <footer 
+          style={{
+            margin: `0 auto`,
+            padding: `0px 1.0875rem 1.45rem`
+          }}
+        >
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a> and <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a>
+        </footer>
       </>
     )}
   />
