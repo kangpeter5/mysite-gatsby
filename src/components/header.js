@@ -41,7 +41,7 @@ const Header = ({ siteTitle, location }) => (
         margin: `0 auto`
       }}
     >
-      <h3 style={{ marginRight: 20 }}>
+      <h3 style={{ width: `100%`, marginRight: 20 }}>
         <Link to="/" style={{ color: `white`, textDecoration: `none`, }} >
           {siteTitle}
         </Link>
@@ -51,7 +51,8 @@ const Header = ({ siteTitle, location }) => (
           listStyle: `none`, 
           display: `flex`, 
           flexDirection: `row`, 
-          justifyContent: `end`,
+          justifyContent: `flex-end`,
+          width: `100%`,
           margin: 0
         }}
       >

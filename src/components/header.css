@@ -5,7 +5,14 @@ header li{
     margin-right: 20px;
     margin-bottom: 0;
 }
+header li:last-child{
+    margin-right: 0;
+}
 header li a{
     text-decoration: none;
     color: #fff;
+    transition: all 0.5s;
+}
+header li a:hover{
+    color: #888;
 }
