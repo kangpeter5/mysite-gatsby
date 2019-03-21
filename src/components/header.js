@@ -57,6 +57,7 @@ const Header = ({ siteTitle, location }) => (
         }}
       >
         <ListLink to="/about/">About</ListLink>
+        <ListLink to="/works/">Works</ListLink>
         <ListLink to="/contact/">Contact</ListLink>
       </ul>
     </header>
