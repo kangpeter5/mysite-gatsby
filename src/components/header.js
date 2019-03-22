@@ -68,10 +68,10 @@ Header.propTypes = {
   siteTitle: PropTypes.string,
   location: PropTypes.object,
 }
-
+/*
 Header.defaultProps = {
   siteTitle: ``,
   location: window.location.pathname,
-}
+}*/
 
 export default Header
