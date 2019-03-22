@@ -56,7 +56,7 @@ const Header = ({ siteTitle, location }) => (
           margin: 0
         }}
       >
-        <ListLink to="/about/">About</ListLink>
+        {/*<ListLink to="/about/">About</ListLink>*/}
       </ul>
     </header>
   </div>
