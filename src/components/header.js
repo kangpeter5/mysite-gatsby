@@ -71,7 +71,7 @@ Header.propTypes = {
 
 Header.defaultProps = {
   siteTitle: ``,
-  location: window.location,
+  location: window.location.pathname,
 }
 
 export default Header
