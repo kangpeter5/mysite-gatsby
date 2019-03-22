@@ -1,3 +1,5 @@
+
+/*
 import React, { useState, useEffect, useRef } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,7 +15,7 @@ function hidePopup() {
     document.getElementById("dialog").style.display = "none"
     song1.pause()
 }
-/*
+
 function Timer(props) {
 
     const [time, setTime] = useState(0)
