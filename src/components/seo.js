@@ -9,8 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import favicon from "../images/me.png"
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, image }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -34,6 +35,9 @@ function SEO({ description, lang, meta, keywords, title }) {
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={[
+        { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
+      ]}
       meta={[
         {
           name: `description`,
@@ -50,6 +54,10 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `image`,
+          content: `${favicon}`
         },
         {
           name: `twitter:card`,
@@ -76,7 +84,8 @@ function SEO({ description, lang, meta, keywords, title }) {
               }
             : []
         )
-        .concat(meta)}
+        .concat(meta)
+      }
     />
   )
 }
@@ -91,6 +100,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
+  image: PropTypes.string,
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
 }

@@ -7,11 +7,12 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+//import useTheme from "./useTheme"
 import { StaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
 import "./layout.css"
 
+//const { theme, toggleTheme } = useTheme();
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -41,6 +42,7 @@ const Layout = ({ children }) => (
             fontSize: `12px`
           }}
         >
+          {/*<button type="button" onClick={toggleTheme}>Switch Theme</button>*/}
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a> and <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a>

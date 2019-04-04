@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import "./header.css"
+import logo from "../images/me.png"
 
 /* using this git
 https://github.com/lowmess/lowmess/blob/master/src/components/Navigation/Navigation.js
@@ -41,9 +42,9 @@ const Header = ({ siteTitle, location }) => (
         margin: `0 auto`
       }}
     >
-      <h3 style={{ width: `100%`, marginRight: 20 }}>
+      <h3 style={{ width: `50px`, marginRight: 20 }}>
         <Link to="/" style={{ color: `white`, textDecoration: `none`, }} >
-          {siteTitle}
+          <img src={logo} alt="Logo" style={{ marginBottom: `0` }} />
         </Link>
       </h3>
       <ul 
@@ -56,7 +57,8 @@ const Header = ({ siteTitle, location }) => (
           margin: 0
         }}
       >
-        {/*<ListLink to="/about/">About</ListLink>*/}
+        <ListLink to="/about/">About</ListLink>
+        <ListLink to="/contact/">Contact</ListLink>
       </ul>
     </header>
   </div>
