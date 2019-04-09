@@ -39,7 +39,6 @@ const Header = ({ siteTitle, location }) => (
     <header
       style={{
         display: `flex`,
-        margin: `0 auto`
       }}
     >
       <h3 style={{ width: `50px`, marginRight: 20 }}>

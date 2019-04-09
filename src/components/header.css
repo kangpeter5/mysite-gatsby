@@ -2,6 +2,8 @@ header li .active{
     border-bottom: 2px solid #fff;
 }
 header li{
+    display: flex;
+    align-items: center;
     margin-right: 20px;
     margin-bottom: 0;
 }

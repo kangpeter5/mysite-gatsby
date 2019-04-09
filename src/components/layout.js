@@ -29,8 +29,8 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
-            margin: `20px auto`,
-            padding: `0px 1.0875rem 1.45rem`
+            padding: `1rem`,
+            height: `80vh`
           }}
         >
           <main>{children}</main>
@@ -38,8 +38,9 @@ const Layout = ({ children }) => (
         <footer 
           style={{
             margin: `0 auto`,
-            padding: `0px 1.0875rem 1.45rem`,
-            fontSize: `12px`
+            padding: `0px 1rem 1rem`,
+            fontSize: `12px`,
+            textAlign: `center`,
           }}
         >
           {/*<button type="button" onClick={toggleTheme}>Switch Theme</button>*/}

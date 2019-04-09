@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Pete Kang <kangpeter5@gmail.com>",
   "dependencies": {
+    "core-js": "3",
     "gatsby": "^2.1.22",
     "gatsby-image": "^2.0.31",
     "gatsby-plugin-manifest": "^2.0.21",
