@@ -32,7 +32,6 @@ ListLink.propTypes = {
 const Header = ({ siteTitle, location }) => (
   <div
     style={{
-      background: `rebeccapurple`,
       padding: `1.45rem 1.0875rem`
     }}
   >
@@ -41,11 +40,11 @@ const Header = ({ siteTitle, location }) => (
         display: `flex`,
       }}
     >
-      <h3 style={{ width: `50px`, marginRight: 20 }}>
-        <Link to="/" style={{ color: `white`, textDecoration: `none`, }} >
-          <img src={logo} alt="Logo" style={{ marginBottom: `0` }} />
+      <div style={{ width: `50px`, height: `53px`, marginRight: 20, }}>
+        <Link to="/" style={{ color: `#000`, textDecoration: `none`, }} >
+          <img src={logo} alt="Logo" style={{ width: `100%`, marginBottom: `0`, }} />
         </Link>
-      </h3>
+      </div>
       <ul 
         style={{ 
           listStyle: `none`, 
@@ -53,10 +52,13 @@ const Header = ({ siteTitle, location }) => (
           flexDirection: `row`, 
           justifyContent: `flex-end`,
           width: `100%`,
-          margin: 0
+          height: `53px`,
+          margin: 0,
         }}
       >
         <ListLink to="/about/">About</ListLink>
+        <ListLink to="/works/">Works</ListLink>
+        <ListLink to="/projects/">Projects</ListLink>
         <ListLink to="/contact/">Contact</ListLink>
       </ul>
     </header>

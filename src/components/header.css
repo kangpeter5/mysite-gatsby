@@ -1,5 +1,5 @@
 header li .active{
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #000;
 }
 header li{
     display: flex;
@@ -12,7 +12,7 @@ header li:last-child{
 }
 header li a{
     text-decoration: none;
-    color: #fff;
+    color: #000;
     transition: all 0.5s;
 }
 header li a:hover{
