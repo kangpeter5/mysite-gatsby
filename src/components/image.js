@@ -13,7 +13,17 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const Image = () => (
+export const fluidImage = graphql`
+fragment fluidWorksImg on File {
+  childImageSharp {
+    fluid(maxWidth: 400) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+`;
+
+const Image = (props) => (
   <StaticQuery
     query={graphql`
       query {
@@ -23,6 +33,30 @@ const Image = () => (
               ...GatsbyImageSharpFluid
             }
           }
+        }
+        abmImage: file(relativePath: { eq: "abm.png" }) {
+          ...fluidWorksImg
+        }
+        codendowImage: file(relativePath: { eq: "codendow.png" }) {
+          ...fluidWorksImg
+        }
+        crashImage: file(relativePath: { eq: "crash.png" }) {
+          ...fluidWorksImg
+        }
+        destinyImage: file(relativePath: { eq: "destiny.png" }) {
+          ...fluidWorksImg
+        }
+        sekiroImage: file(relativePath: { eq: "sekiro.png" }) {
+          ...fluidWorksImg
+        }
+        spyroImage: file(relativePath: { eq: "spyro.png" }) {
+          ...fluidWorksImg
+        }
+        treyarchImage: file(relativePath: { eq: "treyarch.png" }) {
+          ...fluidWorksImg
+        }
+        wwiiImage: file(relativePath: { eq: "wwii.png" }) {
+          ...fluidWorksImg
         }
       }
     `}

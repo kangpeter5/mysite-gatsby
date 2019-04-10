@@ -4,10 +4,6 @@ import React from "react"
 import "./header.css"
 import logo from "../images/me.png"
 
-/* using this git
-https://github.com/lowmess/lowmess/blob/master/src/components/Navigation/Navigation.js
-*/
-
 const isActive = ({ location, href }) => {  
   if(location.pathname !== '/' && location.pathname === href){
     return { className: 'active' }
@@ -40,7 +36,7 @@ const Header = ({ siteTitle, location }) => (
         display: `flex`,
       }}
     >
-      <div style={{ width: `50px`, height: `53px`, marginRight: 20, }}>
+      <div style={{ width: `53px`, }}>
         <Link to="/" style={{ color: `#000`, textDecoration: `none`, }} >
           <img src={logo} alt="Logo" style={{ width: `100%`, marginBottom: `0`, }} />
         </Link>
@@ -69,10 +65,5 @@ Header.propTypes = {
   siteTitle: PropTypes.string,
   location: PropTypes.object,
 }
-/*
-Header.defaultProps = {
-  siteTitle: ``,
-  location: window.location.pathname,
-}*/
 
 export default Header

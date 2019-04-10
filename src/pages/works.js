@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import Image from "../components/image"
 import SEO from "../components/seo"
 
 const BodyLink = props =>(
@@ -12,7 +13,9 @@ const WorksPage = () => (
         <h1 className="title-container">Here's some things I've been working on</h1>
         
         <div>
-            <BodyLink href="https://www.activisionblizzardmedia.com/">Activision Blizzard Media</BodyLink>
+            <BodyLink href="https://www.activisionblizzardmedia.com/">
+            <Image />
+            Activision Blizzard Media</BodyLink>
             <BodyLink href="https://www.callofdutyendowment.org/">Call of Duty Endowment</BodyLink>
             <BodyLink href="https://www.sekirothegame.com/">Sekiro: Shadows Die Twice</BodyLink>
             <BodyLink href="https://www.crashbandicoot.com/">Crash Bandicoot</BodyLink>
