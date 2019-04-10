@@ -42,6 +42,7 @@ const Layout = ({ children }) => (
             padding: `0px 1rem 1rem`,
             fontSize: `12px`,
             textAlign: `center`,
+            textDecoration: `none`,
           }}
         >
           {/*<button type="button" onClick={toggleTheme}>Switch Theme</button>*/}
