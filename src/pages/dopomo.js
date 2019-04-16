@@ -12,6 +12,8 @@ const BodyLink = props =>(
 const DoPomoApp = () => (
     <Layout>
         <SEO title="DoPomo" keywords={[`javascript`, `react`, `html`, `css`, `productivity`, `js`, `es6`, `pomodoro`, `to-do`, ]} />
+
+        <BodyLink href="/">Home</BodyLink>
     </Layout>
 )
 

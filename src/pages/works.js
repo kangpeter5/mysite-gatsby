@@ -22,7 +22,7 @@ const WorkContainer = props => (
 )
 
 const WorksPage = ({
-    image1,
+    data
 }) => (
     <Layout>
         <SEO title="Works" keywords={[`adobe`, `javascript`, `jquery`, `less`, `scss`, `html`, `css`, `social-media`, `js`, `es6`]} />
@@ -36,7 +36,7 @@ const WorksPage = ({
             }}
         >
             <WorkContainer href="https://www.activisionblizzardmedia.com/">
-            <Image imageInfo={image1} alt="Activision Blizzard Media" />
+            <Image imageInfo={data.image1.childImageSharp.fluid} alt="Activision Blizzard Media" />
             Activision Blizzard Media</WorkContainer>
 
             <WorkContainer href="https://www.callofdutyendowment.org/">Call of Duty Endowment</WorkContainer>

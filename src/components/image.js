@@ -26,20 +26,20 @@ fragment fluidWorksImg on File {
 `;*/
 
 const Image = (imageInfo) => {
-  const { childImageSharp, image } = imageInfo
+  const { alt ='', childImageSharp, image } = imageInfo
 
   if(!!image && !!image.childImageSharp){
     return (
-      <Img fluid={image.childImageSharp.fluid} />
+      <Img fluid={image.childImageSharp.fluid} alt={alt} />
     )
   }
 
   if(!!childImageSharp) {
-    return <Img fluid={childImageSharp.fluid}/>
+    return <Img fluid={childImageSharp.fluid} alt={alt} />
   }
 
   if(!!image && typeof image ==='string'){
-    return <img src={image} />
+    return <img src={image} alt={alt} />
   }
   
   return null
@@ -47,6 +47,7 @@ const Image = (imageInfo) => {
 
 Image.prototypes = {
   imageInfo: PropTypes.shape({
+    alt: PropTypes.string,
     childImageSharp: PropTypes.object,
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
   }).isRequired,
