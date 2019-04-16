@@ -1,6 +1,8 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import PropTypes from 'prop-types'
+//import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+//import { checkPropTypes } from "prop-types";
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,7 +15,7 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-export const fluidImage = graphql`
+/*export const fluidImage = graphql`
 fragment fluidWorksImg on File {
   childImageSharp {
     fluid(maxWidth: 400) {
@@ -21,9 +23,36 @@ fragment fluidWorksImg on File {
     }
   }
 }
-`;
+`;*/
 
-const Image = (props) => (
+const Image = (imageInfo) => {
+  const { childImageSharp, image } = imageInfo
+
+  if(!!image && !!image.childImageSharp){
+    return (
+      <Img fluid={image.childImageSharp.fluid} />
+    )
+  }
+
+  if(!!childImageSharp) {
+    return <Img fluid={childImageSharp.fluid}/>
+  }
+
+  if(!!image && typeof image ==='string'){
+    return <img src={image} />
+  }
+  
+  return null
+}
+
+Image.prototypes = {
+  imageInfo: PropTypes.shape({
+    childImageSharp: PropTypes.object,
+    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+  }).isRequired,
+}
+
+/*const Image = (props) => (
   <StaticQuery
     query={graphql`
       query {
@@ -60,7 +89,9 @@ const Image = (props) => (
         }
       }
     `}
-    render={data => <Img fluid={data.abmImage.childImageSharp.fluid} />}
+    render={
+      data => <Img fluid={data.abmImage.childImageSharp.fluid} />
+    }
   />
-)
+)*/
 export default Image
