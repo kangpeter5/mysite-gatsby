@@ -5,6 +5,8 @@ import { graphql } from 'gatsby'
 import Image from "../components/image"
 import SEO from "../components/seo"
 
+//https://github.com/netlify-templates/gatsby-starter-netlify-cms/
+
 const WorkContainer = props => (
     <div style={{
         flex: `1 0 30%`,
