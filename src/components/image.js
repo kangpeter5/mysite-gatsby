@@ -60,7 +60,7 @@ const Image = (props) => (
         }
       }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => <Img fluid={data.abmImage.childImageSharp.fluid} />}
   />
 )
 export default Image
