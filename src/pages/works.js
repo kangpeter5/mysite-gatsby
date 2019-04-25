@@ -10,13 +10,15 @@ import SEO from "../components/seo"
 const WorkContainer = props => (
     <div style={{
         flex: `1 0 48%`,
-        margin: `1%`,
+        margin: `2% 1%`,
+        padding: `1%`,
         textAlign: `center`,
     }}>
         <a target="_blank" rel="noopener noreferrer" href={props.href} 
         style={{ 
             textDecoration: `none`, 
             fontWeight: `bold`, 
+            fontSize: `1.2rem`,
             color: `#000`,
         }}>{props.children}</a>
     </div>
@@ -27,7 +29,7 @@ const WorksPage = ({
 }) => (
     <Layout>
         <SEO title="Works" keywords={[`adobe`, `javascript`, `jquery`, `less`, `scss`, `html`, `css`, `social-media`, `js`, `es6`]} />
-        <h1 className="title-container">Here's some things I've been working on</h1>
+        <h1 className="title-container">Works</h1>
         
         <div 
             style={{
