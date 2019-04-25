@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import "./header.css"
+import headerStyles from "./header.module.scss"
 import logo from "../images/me.png"
 
 const isActive = ({ location, href }) => {  
@@ -13,7 +13,7 @@ const isActive = ({ location, href }) => {
 }
 
 const ListLink = ({ children, to }) =>(
-  <li>
+  <li className={headerStyles.link}>
     <Link to={to} getProps={isActive}>
       {children}
     </Link>

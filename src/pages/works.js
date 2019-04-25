@@ -9,8 +9,9 @@ import SEO from "../components/seo"
 
 const WorkContainer = props => (
     <div style={{
-        flex: `1 0 30%`,
+        flex: `1 0 48%`,
         margin: `1%`,
+        textAlign: `center`,
     }}>
         <a target="_blank" rel="noopener noreferrer" href={props.href} 
         style={{ 

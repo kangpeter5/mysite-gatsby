@@ -15,7 +15,7 @@ const AboutPage = () => (
         <p>I started out as a Battery Systems Test Engineer for <BodyLink href="https://www.linkedin.com/in/kangpeter">General Motors</BodyLink> writing and running automated-tests for the Chevrolet Volt and other hybrid vehicles.</p>
         <p>At the same time, I became a videographer/part-owner at <BodyLink href="https://www.youtube.com/user/strifetv">Strife.TV</BodyLink> to document and explore the different urban dance cultures around the world. Also, I helped manage and strategize all social media accounts for <BodyLink href="http://supercr3w.com/">SuperCr3w</BodyLink> (MTV's America's Best Dance Crew Season 2 Winner), <BodyLink href="https://www.instagram.com/fssworldwide/">Freestyle Session</BodyLink>, and <BodyLink href="https://www.instagram.com/mariepoppinsdancer/">Marie Poppins</BodyLink>.</p>
         <p>After a while, I wanted to get back into creating/building things.</p>
-        <p>I put myself through a bootcamp in 2016 and started making websites.</p>
+        <p>2016, I put myself through a bootcamp and started making websites.</p>
         <p>Check out some of my <Link to={/works/}>work</Link></p>
     </Layout>
 )

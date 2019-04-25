@@ -1,0 +1,25 @@
+header {
+    .link {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        margin-bottom: 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            transition: all 0.5s;
+
+            &:hover {
+                color: #888;
+            }
+            &.active {
+                border-bottom: 2px solid #000;
+            }
+        }
+    }
+}
