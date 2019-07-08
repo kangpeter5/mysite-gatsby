@@ -38,6 +38,11 @@ const WorksPage = ({
                 flexWrap: `wrap`,
             }}
         >
+            
+            <WorkContainer href="https://www.callofduty.com/modernwarfare/">Call of Duty : Modern Warfare</WorkContainer>
+
+            <WorkContainer href="https://www.crashbandicoot.com/">Crash Bandicoot</WorkContainer>
+
             <WorkContainer href="https://www.activisionblizzardmedia.com/">
             <Image imageInfo={data.image1.childImageSharp.fluid} alt="Activision Blizzard Media" />
             Activision Blizzard Media</WorkContainer>
@@ -46,8 +51,6 @@ const WorksPage = ({
 
             <WorkContainer href="https://www.sekirothegame.com/">Sekiro: Shadows Die Twice</WorkContainer>
 
-            <WorkContainer href="https://www.crashbandicoot.com/">Crash Bandicoot</WorkContainer>
-
             <WorkContainer href="https://spyrothedragon.com/">Spyro the Dragon</WorkContainer>
 
             <WorkContainer href="https://www.treyarch.com/">Treyarch</WorkContainer>
@@ -55,6 +58,8 @@ const WorksPage = ({
             <WorkContainer href="https://www.callofduty.com/wwii/buy">Call of Duty WWII</WorkContainer>
 
             <WorkContainer href="https://www.destinythegame.com/">Destiny the Game</WorkContainer>
+
+            <WorkContainer href="http://www.jess2sick.com/">jess2sick</WorkContainer>
         </div>
     </Layout>
 )

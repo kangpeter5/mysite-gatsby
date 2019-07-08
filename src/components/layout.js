@@ -39,17 +39,20 @@ const Layout = ({ children }) => (
         </div>
         <footer 
           style={{
-            margin: `0 auto`,
-            padding: `0px 1rem 1rem`,
+            display: `flex`,
+            justifyContent: `center`,
+            alignItems: `center`,
+            height: `10vh`,
             fontSize: `12px`,
             textAlign: `center`,
             textDecoration: `none`,
+            margin: `0 auto`,
           }}
         >
           {/*<button type="button" onClick={toggleTheme}>Switch Theme</button>*/}
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a> and <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a>
+          <section>
+            ©{new Date().getFullYear()}, Built using <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a> & <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a>
+          </section>
         </footer>
       </>
     )}
