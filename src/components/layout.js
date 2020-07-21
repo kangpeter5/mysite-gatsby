@@ -31,21 +31,25 @@ const Layout = ({ children }) => (
           style={{
             padding: `1rem`,
             maxWidth: `1080px`,
-            height: `80vh`,
             margin: `0 auto`,
           }}
         >
-          <main>{children}</main>
+          <main
+            style={{
+              position: `relative`,
+              minHeight: `80vh`,
+            }}
+          >{children}</main>
         </div>
         <footer 
           style={{
             display: `flex`,
             justifyContent: `center`,
             alignItems: `center`,
-            height: `10vh`,
             fontSize: `12px`,
             textAlign: `center`,
             textDecoration: `none`,
+            padding: `1.45rem 0`,
             margin: `0 auto`,
           }}
         >

@@ -8,14 +8,12 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
     <div style={{
-      display: `flex`,
-      justifyContent: `space-between`,
-      alignItems: `center`,
-      height: `80vh`,
-      maxWidth: `440px`,
+      position: `absolute`,
+      top: `50%`,
+      left: `50%`,
+      transform: `translate(-50%,-50%)`,
       width: `100%`,
-      margin: `0 auto`,
-      padding: `0 20px`,
+      padding: `0 1.45rem`,
     }}>
       <h1 
         className="title-container"

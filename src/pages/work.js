@@ -9,9 +9,8 @@ import SEO from "../components/seo"
 
 const WorkContainer = props => (
     <div style={{
-        flex: `1 0 48%`,
-        margin: `2% 1%`,
         padding: `1%`,
+        marginBottom: `1.45rem`,
         textAlign: `center`,
     }}>
         <a target="_blank" rel="noopener noreferrer" href={props.href} 
@@ -24,47 +23,81 @@ const WorkContainer = props => (
     </div>
 )
 
-const WorksPage = ({
+const WorkPage = ({
     data
 }) => (
     <Layout>
-        <SEO title="Works" keywords={[`adobe`, `javascript`, `jquery`, `less`, `scss`, `html`, `css`, `social-media`, `js`, `es6`]} />
-        <h1 className="title-container">Works</h1>
-        
-        <div 
-            style={{
-                display: `flex`,
-                flexDirection: `row`,
-                flexWrap: `wrap`,
-            }}
-        >
+        <SEO title="Work" keywords={[`adobe`, `javascript`, `jquery`, `less`, `scss`, `html`, `css`, `social-media`, `js`, `es6`]} />
+        <h1 className="title-container">Work</h1>
+
+        <div className="row">
+            <div 
+                className="col col-1" 
+                style={{
+                    padding: `1%`,
+                }}
+            >
             
-            <WorkContainer href="https://www.callofduty.com/modernwarfare/">Call of Duty : Modern Warfare</WorkContainer>
+                <h3 
+                    style={{
+                        textAlign: `center`,
+                        marginTop: `1.45rem`,
+                        marginBottom: `1.45rem`,
+                    }}
+                >Games</h3>
+                <hr />
 
-            <WorkContainer href="https://www.crashbandicoot.com/">Crash Bandicoot</WorkContainer>
+                <WorkContainer href="https://www.callofduty.com/modernwarfare/">Call of Duty : Modern Warfare</WorkContainer>
 
-            <WorkContainer href="https://www.activisionblizzardmedia.com/">
-            <Image imageInfo={data.image1.childImageSharp.fluid} alt="Activision Blizzard Media" />
-            Activision Blizzard Media</WorkContainer>
+                <WorkContainer href="https://www.crashbandicoot.com/">Crash Bandicoot</WorkContainer>
 
-            <WorkContainer href="https://www.callofdutyendowment.org/">Call of Duty Endowment</WorkContainer>
+                <WorkContainer href="https://www.sekirothegame.com/">Sekiro: Shadows Die Twice</WorkContainer>
 
-            <WorkContainer href="https://www.sekirothegame.com/">Sekiro: Shadows Die Twice</WorkContainer>
+                <WorkContainer href="https://spyrothedragon.com/">Spyro the Dragon</WorkContainer>
 
-            <WorkContainer href="https://spyrothedragon.com/">Spyro the Dragon</WorkContainer>
+                <WorkContainer href="https://www.treyarch.com/">Treyarch</WorkContainer>
 
-            <WorkContainer href="https://www.treyarch.com/">Treyarch</WorkContainer>
-            
-            <WorkContainer href="https://www.callofduty.com/wwii/buy">Call of Duty WWII</WorkContainer>
+                <WorkContainer href="https://www.callofduty.com/wwii/buy">Call of Duty WWII</WorkContainer>
 
-            <WorkContainer href="https://www.destinythegame.com/">Destiny the Game</WorkContainer>
+                <WorkContainer href="https://www.destinythegame.com/">Destiny the Game</WorkContainer>
 
-            <WorkContainer href="http://www.jess2sick.com/">jess2sick</WorkContainer>
+            </div>
+
+            <div 
+                className="col col-2"
+                style={{
+                    marginTop: `1.45rem`,
+                    padding: `1%`,
+                }}
+            >
+                <h3 
+                    style={{
+                        textAlign: `center`,
+                        marginBottom: `1.45rem`,
+                    }}
+                >Artists / Marketing</h3>
+
+                <hr />
+                <WorkContainer href="https://www.ativision.com/">Activision</WorkContainer>
+                
+                <WorkContainer href="https://www.activisionblizzardmedia.com/">
+                    <Image imageInfo={data.image1.childImageSharp.fluid} alt="Activision Blizzard Media" />Activision Blizzard Media
+                </WorkContainer>
+
+                <WorkContainer href="https://www.callofdutyendowment.org/">Call of Duty Endowment</WorkContainer>
+
+                <WorkContainer href="http://www.operandirecords.com/">Operandi Records</WorkContainer>
+
+                <WorkContainer href="http://www.whatsupturtle.com/">Turtle T</WorkContainer>
+
+                <WorkContainer href="http://www.jess2sick.com/">jess2sick</WorkContainer>
+            </div>
         </div>
+        
     </Layout>
 )
 
-WorksPage.propTypes = {
+WorkPage.propTypes = {
     data: PropTypes.shape({
         image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
         image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -77,9 +110,9 @@ WorksPage.propTypes = {
     }),
 }
 
-export default WorksPage
+export default WorkPage
 
-export const WorksPageQuery = graphql`
+export const WorkPageQuery = graphql`
     query {
         image1: file(relativePath: { eq: "abm.png" }) {
             childImageSharp {

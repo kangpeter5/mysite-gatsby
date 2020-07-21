@@ -48,8 +48,8 @@ const Header = ({ siteTitle, location }) => (
         margin: 0,
       }}
     >
-      <ListLink to="/about/">About</ListLink>
-      <ListLink to="/works/">Works</ListLink>
+      {/* <ListLink to="/about/">About</ListLink> */}
+      <ListLink to="/work/">Work</ListLink>
       <ListLink to="/contact/">Contact</ListLink>
     </ul>
   </header>

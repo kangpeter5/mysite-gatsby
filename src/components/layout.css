@@ -222,7 +222,6 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 h1 {
   margin-left: 0;
@@ -232,7 +231,6 @@ h1 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
   color: inherit;
   font-family: 'Exo', sans-serif;
   font-weight: bold;
@@ -622,4 +620,21 @@ pre tt:after {
 /* Custom Layout */
 .title-container{
   text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Columns & Rows */
+.row{
+  display: flex;
+}
+.col{
+  width: 50%;
+}
+@media screen and (max-width: 1024px){
+  .row{
+    display: block;
+  }
+  .col{
+      width: 100%;
+  }
 }
