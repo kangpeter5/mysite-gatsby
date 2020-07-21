@@ -1,11 +1,32 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import Layout from "../components/layout"
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-//https://github.com/netlify-templates/gatsby-starter-netlify-cms/
+let defaultWidth
+
+if (typeof window !== `undefined`) {
+    defaultWidth = window.innerWidth
+}
+
+const useWindowWidth = () => {
+    const [windowWidth, setWindowWidth ] = useState(defaultWidth)
+  
+    const handleWindowResize = () => {
+        setWindowWidth(defaultWidth)
+    }
+  
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowResize)
+  
+        return () => window.removeEventListener('resize', handleWindowResize)
+    },[])
+    
+    return windowWidth
+}
+
 
 const WorkContainer = props => (
     <div style={{
@@ -28,7 +49,8 @@ const WorkPage = ({
 }) => (
     <Layout>
         <SEO title="Work" keywords={[`adobe`, `javascript`, `jquery`, `less`, `scss`, `html`, `css`, `social-media`, `js`, `es6`]} />
-        <h1 className="title-container">Work</h1>
+
+        {useWindowWidth() < 768 ? '' : <h1 className="title-container">Work</h1>}
 
         <div className="row">
             <div 
@@ -37,14 +59,17 @@ const WorkPage = ({
                     padding: `1%`,
                 }}
             >
-            
-                <h3 
+                {useWindowWidth() < 768 ? <h1 
                     style={{
                         textAlign: `center`,
-                        marginTop: `1.45rem`,
                         marginBottom: `1.45rem`,
                     }}
-                >Games</h3>
+                >Games</h1> : <h3 
+                    style={{
+                        textAlign: `center`,
+                        marginBottom: `1.45rem`,
+                    }}
+                >Games</h3>}
                 <hr />
 
                 <WorkContainer href="https://www.callofduty.com/modernwarfare/">Call of Duty : Modern Warfare</WorkContainer>
@@ -66,18 +91,23 @@ const WorkPage = ({
             <div 
                 className="col col-2"
                 style={{
-                    marginTop: `1.45rem`,
                     padding: `1%`,
                 }}
             >
-                <h3 
+                {useWindowWidth() < 768 ? <h1 
+                    style={{
+                        textAlign: `center`,
+                        marginTop: `1.45rem`,
+                        marginBottom: `1.45rem`,
+                    }}
+                >Artists / Marketing</h1> : <h3 
                     style={{
                         textAlign: `center`,
                         marginBottom: `1.45rem`,
                     }}
-                >Artists / Marketing</h3>
-
+                >Artists / Marketing</h3>}
                 <hr />
+
                 <WorkContainer href="https://www.ativision.com/">Activision</WorkContainer>
                 
                 <WorkContainer href="https://www.activisionblizzardmedia.com/">
