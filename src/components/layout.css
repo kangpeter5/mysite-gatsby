@@ -637,4 +637,7 @@ pre tt:after {
   .col{
       width: 100%;
   }
+  .col-2{
+    margin-top: 1.45rem;
+  }
 }

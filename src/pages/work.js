@@ -72,7 +72,7 @@ const WorkPage = ({
                 >Games</h3>}
                 <hr />
 
-                <WorkContainer href="https://www.callofduty.com/modernwarfare/">Call of Duty : Modern Warfare</WorkContainer>
+                <WorkContainer href="https://www.callofduty.com/modernwarfare">Call of Duty : Modern Warfare</WorkContainer>
 
                 <WorkContainer href="https://www.crashbandicoot.com/">Crash Bandicoot</WorkContainer>
 
