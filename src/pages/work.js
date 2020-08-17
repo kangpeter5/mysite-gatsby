@@ -119,8 +119,6 @@ const WorkPage = ({
                 <WorkContainer href="http://www.operandirecords.com/">Operandi Records</WorkContainer>
 
                 <WorkContainer href="http://www.whatsupturtle.com/">Turtle T</WorkContainer>
-
-                <WorkContainer href="http://www.jess2sick.com/">jess2sick</WorkContainer>
             </div>
         </div>
         
