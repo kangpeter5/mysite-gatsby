@@ -80,8 +80,6 @@ const WorkPage = ({
 
                 <WorkContainer href="https://spyrothedragon.com/">Spyro the Dragon</WorkContainer>
 
-                <WorkContainer href="https://www.treyarch.com/">Treyarch</WorkContainer>
-
                 <WorkContainer href="https://www.callofduty.com/wwii/buy">Call of Duty WWII</WorkContainer>
 
                 <WorkContainer href="https://www.destinythegame.com/">Destiny the Game</WorkContainer>
@@ -117,6 +115,8 @@ const WorkPage = ({
                 <WorkContainer href="https://www.callofdutyendowment.org/">Call of Duty Endowment</WorkContainer>
 
                 <WorkContainer href="http://www.operandirecords.com/">Operandi Records</WorkContainer>
+
+                <WorkContainer href="https://www.treyarch.com/">Treyarch</WorkContainer>
 
                 <WorkContainer href="http://www.whatsupturtle.com/">Turtle T</WorkContainer>
             </div>
