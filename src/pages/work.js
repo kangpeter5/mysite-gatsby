@@ -106,7 +106,7 @@ const WorkPage = ({
                 >Artists / Marketing</h3>}
                 <hr />
 
-                <WorkContainer href="https://www.ativision.com/">Activision</WorkContainer>
+                <WorkContainer href="https://www.activision.com/">Activision</WorkContainer>
                 
                 <WorkContainer href="https://www.activisionblizzardmedia.com/">
                     <Image imageInfo={data.image1.childImageSharp.fluid} alt="Activision Blizzard Media" />Activision Blizzard Media
